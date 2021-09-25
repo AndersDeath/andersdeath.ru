@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AndersDeath</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        let time = 10;
+        let el = document.querySelector('#time');
+        let iterval = setInterval(() => {
+          --time;
+          el.innerHTML = time;
+          if(time === 1) {
+            clearInterval(iterval);
+            document.querySelector('#link').click();
+          }
+        }, 1000);
+      });
+
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <header>AndersDeath - You will be redirected to my github in <span id="time">10</span> seconds or <a id="link" href="https://github.com/AndersDeath">follow the link</a></header>
+    </div>
+  </body>
+</html>
